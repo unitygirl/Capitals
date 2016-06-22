@@ -33,7 +33,7 @@ var questions = [
     },
     {
         "What is the capital of Arizona?": [
-            "Phoenix"
+            "phoenix"
         ]
     },
     {
@@ -179,7 +179,7 @@ var CARD_TITLE = "State Capitals Flash Cards"; // Be sure to change this for you
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
-        speechOutput = "Let's learn about state capitals. I will ask you about" + GAME_LENGTH.toString()
+        speechOutput = "Let's learn about state capitals. I will ask you about " + GAME_LENGTH.toString()
             + " state capitals, try to get as many right as you can. Just say the capital. Let's begin. ",
         shouldEndSession = false,
 
@@ -191,15 +191,15 @@ function getWelcomeResponse(callback) {
         spokenQuestion = Object.keys(questions[gameQuestions[currentQuestionIndex]]),
         repromptText = spokenQuestion,
 
-       // i, j;
+        i, j;
 
-   // for (i = 0; i < ANSWER_COUNT; i++) {
-    //    repromptText += (i+1).toString() + ". " + roundAnswers[i] + ". "
-   //}
-    speechOutput = repromptText;
+    for (i = 0; i < ANSWER_COUNT; i++) {
+        repromptText += ""
+    }
+    speechOutput += repromptText;
     sessionAttributes = {
-        "speechOutput": spokenQuestion,
-        "repromptText": spokenQuestion,
+        "speechOutput": repromptText,
+        "repromptText": repromptText,
         "currentQuestionIndex": currentQuestionIndex,
         "correctAnswerIndex": correctAnswerIndex + 1,
         "questions": gameQuestions,
@@ -336,7 +336,7 @@ function handleAnswerRequest(intent, session, callback) {
 
         var speechOutputAnalysis = "";
 
-        if (answerSlotValid && intent.slots.Answer.value.toString() == correctAnswerText) {
+        if (answerSlotValid && intent.slots.Answer.value == correctAnswerText) {
             currentScore++;
             speechOutputAnalysis = "correct. ";
         } else {
@@ -349,7 +349,7 @@ function handleAnswerRequest(intent, session, callback) {
         if (currentQuestionIndex == GAME_LENGTH - 1) {
             speechOutput = userGaveUp ? "" : "That answer is ";
             speechOutput += speechOutputAnalysis + "You got " + currentScore.toString() + " out of "
-                + GAME_LENGTH.toString() + " questions correct. Thank you for playing!";
+                + GAME_LENGTH.toString() + " questions correct. Thank you for learning the state capitals with Alexa!";
             callback(session.attributes,
                 buildSpeechletResponse(CARD_TITLE, speechOutput, "", true));
         } else {
@@ -357,13 +357,13 @@ function handleAnswerRequest(intent, session, callback) {
             var spokenQuestion = Object.keys(questions[gameQuestions[currentQuestionIndex]]);
             // Generate a random index for the correct answer, from 0 to 3
             correctAnswerIndex = Math.floor(Math.random() * (ANSWER_COUNT));
-           // var roundAnswers = populateRoundAnswers(gameQuestions, currentQuestionIndex, correctAnswerIndex),
+            var roundAnswers = populateRoundAnswers(gameQuestions, currentQuestionIndex, correctAnswerIndex),
 
                 questionIndexForSpeech = currentQuestionIndex + 1,
                 repromptText =  spokenQuestion ;
-            //for (var i = 0; i < ANSWER_COUNT; i++) {
-            //    repromptText +=  roundAnswers[i]
-           // }
+            for (var i = 0; i < ANSWER_COUNT; i++) {
+                repromptText +=  ""
+            }
             speechOutput += userGaveUp ? "" : "That answer is ";
             speechOutput += speechOutputAnalysis + "Your score is " + currentScore.toString() + ". " + repromptText;
 
@@ -405,7 +405,7 @@ function handleGetHelpRequest(intent, session, callback) {
 
     var speechOutput = "I will ask you to provide the capital for a given state in the United States. Respond with the name of the capital. "
         + "For example, If the state is New York, you would say Albany. To start a new session at any time, say, start session. "
-        + "To repeat the last question, say, repeat. "
+        + "To repeat the last state, say, repeat. "
         + "Would you like to keep playing?",
         repromptText = "To give an answer, respond with the correct capital. "
         + "Would you like to keep playing?";
