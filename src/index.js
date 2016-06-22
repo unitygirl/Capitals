@@ -48,7 +48,227 @@ var questions = [
     },
     {
         "What is the capital of Colorado?": [
-            "Denver"
+            "Sacramento"
+        ]
+    },
+    {
+        "What is the capital of Conneticut?": [
+            "Hartford"
+        ]
+    },
+    {
+        "What is the capital of Delaware?": [
+            "Dover"
+        ]
+    },
+    {
+        "What is the capital of Florida?": [
+            "Tallahassee"
+        ]
+    },
+    {
+        "What is the capital of Georgia?": [
+            "Atlanta"
+        ]
+    },
+    {
+        "What is the capital of Hawaii?": [
+            "Honolulu"
+        ]
+    },
+    {
+        "What is the capital of Idaho?": [
+            "Boise"
+        ]
+    },
+    {
+        "What is the capital of Illinois?": [
+            "Springfield"
+        ]
+    },
+    {
+        "What is the capital of Indiana?": [
+            "Indianapolis"
+        ]
+    },
+    {
+        "What is the capital of Iowa?": [
+            "Des Moines"
+        ]
+    },
+    {
+        "What is the capital of Kansas?": [
+            "Topeka"
+        ]
+    },
+    {
+        "What is the capital of Kentucky?": [
+            "Frankfort"
+        ]
+    },
+    {
+        "What is the capital of Louisiana?": [
+            "Baton Rouge"
+        ]
+    },
+    {
+        "What is the capital of Maine?": [
+            "Augusta"
+        ]
+    },
+    {
+        "What is the capital of Maryland?": [
+            "Annapolis"
+        ]
+    },
+    {
+        "What is the capital of Massachusetts?": [
+            "Boston"
+        ]
+    },
+    {
+        "What is the capital of Michigan?": [
+            "Lansing"
+        ]
+    },
+    {
+        "What is the capital of Minnesota?": [
+            "Saint Paul"
+        ]
+    },
+    {
+        "What is the capital of Mississippi?": [
+            "Jackson"
+        ]
+    },
+    {
+        "What is the capital of Missouri?": [
+            "Jefferson City"
+        ]
+    },
+    {
+        "What is the capital of Montana?": [
+            "Helena"
+        ]
+    },
+    {
+        "What is the capital of Nebraska?": [
+            "Lincoln"
+        ]
+    },
+    {
+        "What is the capital of Nevada?": [
+            "Carson City"
+        ]
+    },
+    {
+        "What is the capital of New Hampshire?": [
+            "Concord"
+        ]
+    },
+    {
+        "What is the capital of New Jersey?": [
+            "Trenton"
+        ]
+    },
+    {
+        "What is the capital of New Mexico?": [
+            "Santa Fe"
+        ]
+    },
+    {
+        "What is the capital of New York?": [
+            "Albany"
+        ]
+    },
+    {
+        "What is the capital of North Carolina?": [
+            "Raleigh"
+        ]
+    },
+    {
+        "What is the capital of North Dakota?": [
+            "Bismark"
+        ]
+    },
+    {
+        "What is the capital of Ohio?": [
+            "Columbus"
+        ]
+    },
+    {
+        "What is the capital of Oklahoma?": [
+            "Oklahoma City"
+        ]
+    },
+    {
+        "What is the capital of Oregon?": [
+            "Salem"
+        ]
+    },
+    {
+        "What is the capital of Pennsylvania?": [
+            "Harrisburg"
+        ]
+    },
+    {
+        "What is the capital of Rhode Island?": [
+            "Providence"
+        ]
+    },
+    {
+        "What is the capital of South Carolina?": [
+            "Columbia"
+        ]
+    },
+    {
+        "What is the capital of South Dakota?": [
+            "Pierre"
+        ]
+    },
+    {
+        "What is the capital of Tennessee?": [
+            "Nashville"
+        ]
+    },
+    {
+        "What is the capital of Texas?": [
+            "Austin"
+        ]
+    },
+    {
+        "What is the capital of Utah?": [
+            "Salt Lake City"
+        ]
+    },
+    {
+        "What is the capital of Vermont?": [
+            "Montpelier"
+        ]
+    },
+    {
+        "What is the capital of Virgina?": [
+            "Richmond"
+        ]
+    },
+    {
+        "What is the capital of Washington?": [
+            "Olympia"
+        ]
+    },
+    {
+        "What is the capital of West Virginia?": [
+            "Charleston"
+        ]
+    },
+    {
+        "What is the capital of Wisconsin?": [
+            "Madison"
+        ]
+    },
+    {
+        "What is the capital of Wyoming?": [
+            "Cheyenne"
         ]
     }
     
