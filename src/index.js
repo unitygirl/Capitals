@@ -9,7 +9,7 @@
  */
 
 /**
- * This sample shows how to create a simple Trivia skill with a multiple choice format. The skill
+ * This sample shows how to create a simple Flash Card skill. The skill
  * supports 1 player at a time, and does not support games across sessions.
  */
 
@@ -21,254 +21,39 @@
  */
 var questions = [
     {
-        "What is the capital of Alabama?": [
-            "Montgomery"
+        "What is A C?": [
+            "actinium"
         ]
     },
     {
-        "What is the capital of Alaska?": [
-            "Juneau"
+        "What is A L?": [
+            "aluminum"
             
         ]
     },
     {
-        "What is the capital of Arizona?": [
-            "phoenix"
+        "What is A M?": [
+            "americium"
         ]
     },
     {
-        "What is the capital of Arkansas?": [
-            "Little Rock"
+        "What is S B?": [
+            "antimony"
         ]
     },
     {
-        "What is the capital of California?": [
-            "Sacramento"
+        "What is A R?": [
+            "argon"
         ]
     },
     {
-        "What is the capital of Colorado?": [
-            "Sacramento"
+        "What is A S?": [
+            "arsenic"
         ]
     },
     {
-        "What is the capital of Conneticut?": [
-            "Hartford"
-        ]
-    },
-    {
-        "What is the capital of Delaware?": [
-            "Dover"
-        ]
-    },
-    {
-        "What is the capital of Florida?": [
-            "Tallahassee"
-        ]
-    },
-    {
-        "What is the capital of Georgia?": [
-            "Atlanta"
-        ]
-    },
-    {
-        "What is the capital of Hawaii?": [
-            "Honolulu"
-        ]
-    },
-    {
-        "What is the capital of Idaho?": [
-            "Boise"
-        ]
-    },
-    {
-        "What is the capital of Illinois?": [
-            "Springfield"
-        ]
-    },
-    {
-        "What is the capital of Indiana?": [
-            "Indianapolis"
-        ]
-    },
-    {
-        "What is the capital of Iowa?": [
-            "Des Moines"
-        ]
-    },
-    {
-        "What is the capital of Kansas?": [
-            "Topeka"
-        ]
-    },
-    {
-        "What is the capital of Kentucky?": [
-            "Frankfort"
-        ]
-    },
-    {
-        "What is the capital of Louisiana?": [
-            "Baton Rouge"
-        ]
-    },
-    {
-        "What is the capital of Maine?": [
-            "Augusta"
-        ]
-    },
-    {
-        "What is the capital of Maryland?": [
-            "Annapolis"
-        ]
-    },
-    {
-        "What is the capital of Massachusetts?": [
-            "Boston"
-        ]
-    },
-    {
-        "What is the capital of Michigan?": [
-            "Lansing"
-        ]
-    },
-    {
-        "What is the capital of Minnesota?": [
-            "Saint Paul"
-        ]
-    },
-    {
-        "What is the capital of Mississippi?": [
-            "Jackson"
-        ]
-    },
-    {
-        "What is the capital of Missouri?": [
-            "Jefferson City"
-        ]
-    },
-    {
-        "What is the capital of Montana?": [
-            "Helena"
-        ]
-    },
-    {
-        "What is the capital of Nebraska?": [
-            "Lincoln"
-        ]
-    },
-    {
-        "What is the capital of Nevada?": [
-            "Carson City"
-        ]
-    },
-    {
-        "What is the capital of New Hampshire?": [
-            "Concord"
-        ]
-    },
-    {
-        "What is the capital of New Jersey?": [
-            "Trenton"
-        ]
-    },
-    {
-        "What is the capital of New Mexico?": [
-            "Santa Fe"
-        ]
-    },
-    {
-        "What is the capital of New York?": [
-            "Albany"
-        ]
-    },
-    {
-        "What is the capital of North Carolina?": [
-            "Raleigh"
-        ]
-    },
-    {
-        "What is the capital of North Dakota?": [
-            "Bismark"
-        ]
-    },
-    {
-        "What is the capital of Ohio?": [
-            "Columbus"
-        ]
-    },
-    {
-        "What is the capital of Oklahoma?": [
-            "Oklahoma City"
-        ]
-    },
-    {
-        "What is the capital of Oregon?": [
-            "Salem"
-        ]
-    },
-    {
-        "What is the capital of Pennsylvania?": [
-            "Harrisburg"
-        ]
-    },
-    {
-        "What is the capital of Rhode Island?": [
-            "Providence"
-        ]
-    },
-    {
-        "What is the capital of South Carolina?": [
-            "Columbia"
-        ]
-    },
-    {
-        "What is the capital of South Dakota?": [
-            "Pierre"
-        ]
-    },
-    {
-        "What is the capital of Tennessee?": [
-            "Nashville"
-        ]
-    },
-    {
-        "What is the capital of Texas?": [
-            "Austin"
-        ]
-    },
-    {
-        "What is the capital of Utah?": [
-            "Salt Lake City"
-        ]
-    },
-    {
-        "What is the capital of Vermont?": [
-            "Montpelier"
-        ]
-    },
-    {
-        "What is the capital of Virgina?": [
-            "Richmond"
-        ]
-    },
-    {
-        "What is the capital of Washington?": [
-            "Olympia"
-        ]
-    },
-    {
-        "What is the capital of West Virginia?": [
-            "Charleston"
-        ]
-    },
-    {
-        "What is the capital of Wisconsin?": [
-            "Madison"
-        ]
-    },
-    {
-        "What is the capital of Wyoming?": [
-            "Cheyenne"
+        "What is A T?": [
+            "astatine"
         ]
     }
     
@@ -395,12 +180,12 @@ function onSessionEnded(sessionEndedRequest, session) {
 
 var ANSWER_COUNT = 1;
 var GAME_LENGTH = 5;
-var CARD_TITLE = "State Capitals Flash Cards"; // Be sure to change this for your skill.
+var CARD_TITLE = "Chemistry Flash Cards"; // Be sure to change this for your skill.
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
-        speechOutput = "Let's learn about state capitals. I will ask you about " + GAME_LENGTH.toString()
-            + " state capitals, try to get as many right as you can. Just say the capital. Let's begin. ",
+        speechOutput = "Let's learn about elements in the periodic table. I will ask you about " + GAME_LENGTH.toString()
+            + " elements, try to get as many right as you can. Just say the name of the element. Let's begin. ",
         shouldEndSession = false,
 
         gameQuestions = populateGameQuestions(),
@@ -544,7 +329,7 @@ function handleAnswerRequest(intent, session, callback) {
         // If the user provided answer isn't a number > 0 and < ANSWER_COUNT,
         // return an error message to the user. Remember to guide the user into providing correct values.
         var reprompt = session.attributes.speechOutput;
-        var speechOutput = "Your answer must be a state capital " + reprompt;
+        var speechOutput = "Your answer must be a known element " + reprompt;
         callback(session.attributes,
             buildSpeechletResponse(CARD_TITLE, speechOutput, reprompt, false));
     } else {
@@ -569,7 +354,7 @@ function handleAnswerRequest(intent, session, callback) {
         if (currentQuestionIndex == GAME_LENGTH - 1) {
             speechOutput = userGaveUp ? "" : "That answer is ";
             speechOutput += speechOutputAnalysis + "You got " + currentScore.toString() + " out of "
-                + GAME_LENGTH.toString() + " questions correct. Thank you for learning the state capitals with Alexa!";
+                + GAME_LENGTH.toString() + " questions correct. Thank you for learning the Periodic Table with Alexa!";
             callback(session.attributes,
                 buildSpeechletResponse(CARD_TITLE, speechOutput, "", true));
         } else {
@@ -623,11 +408,11 @@ function handleGetHelpRequest(intent, session, callback) {
 
     // Do not edit the help dialogue. This has been created by the Alexa team to demonstrate best practices.
 
-    var speechOutput = "I will ask you to provide the capital for a given state in the United States. Respond with the name of the capital. "
-        + "For example, If the state is New York, you would say Albany. To start a new session at any time, say, start session. "
-        + "To repeat the last state, say, repeat. "
+    var speechOutput = "I will ask you to provide the name of a, element in the periodic table. I will provide the abbreviation, you will need to provide the name. "
+        + "For example, If the element is A R, you would say Argon. To start a new game at any time, say, start new game. "
+        + "To repeat the last element, say, repeat. "
         + "Would you like to keep playing?",
-        repromptText = "To give an answer, respond with the correct capital. "
+        repromptText = "To give an answer, respond with the correct element. "
         + "Would you like to keep playing?";
         var shouldEndSession = false;
     callback(session.attributes,
@@ -637,7 +422,7 @@ function handleGetHelpRequest(intent, session, callback) {
 function handleFinishSessionRequest(intent, session, callback) {
     // End the session with a "Good bye!" if the user wants to quit the game
     callback(session.attributes,
-        buildSpeechletResponseWithoutCard("Thanks for playing State Capitals Flash Cards!", "", true));
+        buildSpeechletResponseWithoutCard("Thanks for playing Chemistry Flash Cards!", "", true));
 }
 
 function isAnswerSlotValid(intent) {
